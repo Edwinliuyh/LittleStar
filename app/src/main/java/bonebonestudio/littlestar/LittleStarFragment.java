@@ -1,41 +1,42 @@
 package bonebonestudio.littlestar;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
-
+/**
+ * Created by art2cat on 6/14/16.
+ */
+public class LittleStarFragment extends Fragment {
+    private View view;
     private ListView listView;
     private ListViewAdapter adapter;
 
     private String[] userName = {"zhangsan", "lisi", "wangwu", "zhaoliu"}; //这里第一列所要显示的人名
     private String[] userId = {"1001", "1002", "1003", "1004"};  //这里是人名对应的ID
 
-
+    @Nullable
     @Override
-    protected void onCreate(final Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_main, null);
         initView();
+        return view;
     }
-
     private void initView() {
         // TODO Auto-generated method stub
         Log.i("htp", "beans.size:" + userName.length);
-        listView = (ListView) findViewById(R.id.listView);
-        adapter = new ListViewAdapter(MainActivity.this, userName, userId);
+        listView = (ListView)view.findViewById(R.id.listView);
+        adapter = new ListViewAdapter(getActivity(), userName, userId);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
     }
-}
+
 
 
 //        // TODO Auto-generated method stub
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 //                    break;
 //            }
 //        } else
-//            Toast.makeText(MainActivity.this, "请选择一个成员", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(), "请选择一个成员", Toast.LENGTH_SHORT).show();
 //    }
 //
 //    /**
@@ -155,3 +156,5 @@ public class MainActivity extends AppCompatActivity {
 //        TextView textView = (TextView) findViewById(R.id.summary);
 //        textView.setText((name + " " + str + "\n" + value));
 //    }
+}
+
