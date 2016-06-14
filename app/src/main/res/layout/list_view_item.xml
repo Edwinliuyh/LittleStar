@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+            <TextView
+                android:tag="name"
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="test"
+                android:textSize="28sp"
+                android:clickable="true"
+                android:autoText="false"/>
+
+            <TextView
+                android:id="@+id/textview2"
+                android:tag="queen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="num"
+                android:textSize="28sp"
+                android:gravity="right"
+                android:clickable="true"
+                />
+</LinearLayout>

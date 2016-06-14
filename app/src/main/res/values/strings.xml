@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Little Star</string>
+    <string name="recent">最近事件</string>
+    <string name="xiaodou">小豆</string>
+    <string name="xiaoyue">小越</string>
+    <string name="PaPa">爸爸</string>
+    <string name="staff">成员</string>
+    <string name="hint">请输入小星星事件</string>
+    <string name="submitButton">提交</string>
+    <string name="youGot">你得到</string>
+    <string name="surfix">颗星</string>
+    <string name="youLost">你失去</string>
+</resources>
