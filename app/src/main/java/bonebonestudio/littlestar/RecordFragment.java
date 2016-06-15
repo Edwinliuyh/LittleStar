@@ -12,7 +12,7 @@ import android.widget.ListView;
 /**
  * Created by art2cat on 6/14/16.
  */
-public class LittleStarFragment extends Fragment {
+public class RecordFragment extends Fragment {
     private View view;
     private ListView listView;
     private ListViewAdapter adapter;
@@ -24,7 +24,7 @@ public class LittleStarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_main, null);
+        view = inflater.inflate(R.layout.fragment_record, null);
         initView();
         return view;
     }
