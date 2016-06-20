@@ -23,7 +23,7 @@ public class LeaderBoardFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_leaderboardt, null);
+        view = inflater.inflate(R.layout.fragment_leaderboard, null);
         initView();
         return view;
     }
